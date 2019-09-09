@@ -1,6 +1,6 @@
 #!/usr/local/bin/python3
 
-import paramiko, os, time, subprocess, getpass
+import paramiko, os, time, subprocess, getpass, platform
 from PySide2 import QtWidgets
 from PyQt5 import QtGui
 from PyQt5.QtWidgets import QApplication, QWidget, QCheckBox
@@ -20,7 +20,17 @@ def sshBackup(server, user, passwd, command):
     ssh = paramiko.SSHClient()
     ssh.load_system_host_keys()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    ssh_key = '/Users/'+user+'/.ssh/cisco.key'
+    
+    baseOS = platform.system()
+    if baseOS == 'Darwin':
+        ssh_key = '/Users/'+user+'/.ssh/cisco.key'
+    elif baseOS == 'Linux':
+        ssh_key = '/home/'+user+'/.ssh/cisco.key'
+    elif baseOS == 'Windows':
+        ssh_key = 'C:\Users\'+user+ "\.ssh\cisco.key"
+    else:
+        print ("OS not found in list")
+        ssh_key = None
 
     try:
         open(ssh_key, 'r')
@@ -45,8 +55,16 @@ def sshConnect(server, user, passwd, command):
     ssh = paramiko.SSHClient()
     ssh.load_system_host_keys()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    ssh_key = '/Users/'+user+'/.ssh/cisco.key'
-
+    baseOS = platform.system()
+    if baseOS == 'Darwin':
+        ssh_key = '/Users/'+user+'/.ssh/cisco.key'
+    elif baseOS == 'Linux':
+        ssh_key = '/home/'+user+'/.ssh/cisco.key'
+    elif baseOS == 'Windows':
+        ssh_key = 'C:\Users\'+user+ "\.ssh\cisco.key"
+    else:
+        print ("OS not found in list")
+        ssh_key = None
     try:
         open(ssh_key, 'r')
         ssh.connect(server, username=user, key_filename=ssh_key, allow_agent=True, look_for_keys=True, passphrase=None)
