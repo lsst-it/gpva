@@ -1,0 +1,3 @@
+[MASTER]
+extension-pkg-whitelist=PyQt5,PySide2
+disable=locally-disabled, multiple-statements, fixme, line-too-long, trailing-whitespace, missing-docstring, invalid-name, bad-whitespace, missing-final-newline, no-name-in-module, unused-import, pointless-string-statement, bad-continuation
