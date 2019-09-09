@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/Users/hreinking/Dropbox (LSST)/workspace/personal/pv_app/ui/main.ui',
-# licensing of '/Users/hreinking/Dropbox (LSST)/workspace/personal/pv_app/ui/main.ui' applies.
+# Form implementation generated from reading ui file '/Users/hreinking/Dropbox (LSST)/workspace/lsst/gpva/ui/main.ui',
+# licensing of '/Users/hreinking/Dropbox (LSST)/workspace/lsst/gpva/ui/main.ui' applies.
 #
-# Created: Wed Jun 26 10:52:12 2019
+# Created: Mon Sep  9 12:12:12 2019
 #      by: pyside2-uic  running on PySide2 5.12.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -129,7 +129,7 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QtWidgets.QApplication.translate("MainWindow", "Push Values App", None, -1))
+        MainWindow.setWindowTitle(QtWidgets.QApplication.translate("MainWindow", "GPVA", None, -1))
         self.label_5.setText(QtWidgets.QApplication.translate("MainWindow", "Commands (type one per line)", None, -1))
         self.all.setText(QtWidgets.QApplication.translate("MainWindow", "All", None, -1))
         self.label_4.setText(QtWidgets.QApplication.translate("MainWindow", "User", None, -1))

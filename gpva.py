@@ -7,7 +7,7 @@ from PyQt5.QtWidgets import QApplication, QWidget, QCheckBox
 from PyQt5.QtWidgets import QInputDialog, QLineEdit, QFileDialog, QTextEdit
 from ui import Ui_main
 
-version = 'Build 09'
+version = 'Build 10'
 serversFile = 'servers.txt'
 user = getpass.getuser()
 
@@ -79,7 +79,7 @@ class App(Ui_main.Ui_MainWindow, QtWidgets.QMainWindow):
             exit()
         else:
             self.setupUi(self)
-            self.setWindowTitle("Push Values App - "+version)
+            self.setWindowTitle("GPVA - "+version)
             self.populateUser()
             self.populateServer()
             self.actionReloadServerList.triggered.connect(self.reloadServersList)
