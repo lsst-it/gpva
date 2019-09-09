@@ -4,8 +4,11 @@
 # 06/06/2019
 
 OS:
-Designed to work under MacOS; next commit intended to make it multiplatform
-
+The software will look for the ssh key file, depending on your Operating System
+    MacOS   => ssh_key = '/Users/'+user+'/.ssh/cisco.key'
+    Linux   => ssh_key = '/home/'+user+'/.ssh/cisco.key'        (not yet tested)
+    Windows => ssh_key = 'C:\Users\'+user+ '\.ssh\cisco.key'    (not yet tested)
+    
 General Information:
 Application design to propagate configurations over a single/multiple Cisco Routers/Switches
 
