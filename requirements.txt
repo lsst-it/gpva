@@ -40,7 +40,7 @@ PySide2==5.12.3
 python-dateutil==2.8.0
 PyYAML==5.1.2
 requests==2.21.0
-rsa==3.4.2
+rsa==4.1
 s3transfer==0.2.0
 shiboken2==5.12.3
 six==1.12.0
