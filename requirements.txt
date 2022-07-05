@@ -27,7 +27,7 @@ mccabe==0.6.1
 multidict==4.5.2
 paramiko==2.5
 pyasn1==0.4.5
-pycares==3.0.0
+pycares==4.2.0
 pycodestyle==2.5.0
 pycparser==2.19
 pydocstyle==3.0.0
